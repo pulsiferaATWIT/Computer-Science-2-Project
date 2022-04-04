@@ -2,12 +2,16 @@ package gui;
 
 import javafx.scene.shape.Rectangle;
 
-public class Tile {
-	private Rectangle rect;
-
-	public Tile(int x, int y) {
-		rect = new Rectangle(x, y, 10, 10);
+public class Tile extends Rectangle {
+	private double x, y;
+	
+	public Tile(double x, double y) {
+		super(x, y,  5, 5);
 	}
 	
-	
+	public void move(int deltaX, int deltaY) {
+		this.setX(this.getX() + deltaX);
+		this.setY(this.getY() + deltaY);
+		this.relocate(this.getX(), this.getY());
+	}
 }
