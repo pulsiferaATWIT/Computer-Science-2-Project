@@ -3,8 +3,6 @@ package gui;
 import javafx.scene.shape.Rectangle;
 
 public class Tile extends Rectangle {
-	private double x, y;
-	
 	public Tile(double x, double y) {
 		super(x, y,  5, 5);
 	}

@@ -19,17 +19,12 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		Pane root = new Pane();
-		Scene scene = new Scene(root, 400, 400);
+		Scene scene = new Scene(root, 600, 400);
+		scene.setFill(Color.BLACK);
 
 		Tile t1 = new Tile(200, 200);
-		t1.setFill(Color.BLACK);
+		t1.setFill(Color.LIME);
 		root.getChildren().add(t1);
-
-		Button b1 = new Button("Move Tile");
-		b1.setOnAction(e -> {
-			t1.move(10, 10);
-		});
-		root.getChildren().add(b1);
 
 		scene.setOnKeyPressed(e -> {
 			switch (e.getCode()) {
