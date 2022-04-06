@@ -4,7 +4,7 @@ import javafx.scene.shape.Rectangle;
 
 public class Tile extends Rectangle {
 	public Tile(double x, double y) {
-		super(x, y,  5, 5);
+		super(x, y,  10, 10);
 	}
 	
 	public void move(int deltaX, int deltaY) {
